@@ -1,0 +1,67 @@
+Problema 1
+
+Durata rezolvare: 3-4 ore
+
+Metoda rezolvare:
+Programul itereaza de la prima la ultima cutie pentru a verifica apartenenta acesteia
+la un ciclu. Stocheaza fiecare ciclu gasit intr-o matrice `history[][]` pentru a nu le afisa de 
+mai multe ori. Subprogramul `check()` deschide fiecare cutie incepand de la cutia i pana cand se 
+intoarce tot la ea. Programul foloseste un vector auxiliar `pr[]` pentru a stoca cutiile
+care fac parte dintr-un ciclu. In caz ca acest ciclu are lungimea mai mica sau egala decat n/2, 
+il consideram un ciclu bun si il salvam cu valoarea 2 in `pr[]`. In caz ca ciclul are lungimea
+mai mare decat n/2 il salvam cu valoarea 1 in `pr[]`. Cutiile care au valoarea 0 in `pr[]` nu
+fac parte dintr-un ciclu, iar cele cu valoarea 1 sau 2 vor fi afisate. Daca nu exista nicio
+valoare de 1 in vector, prizonierii castiga jocul, in caz contrat, ei pierd. La final, programul
+afiseaza mesajul corespunzator si toate ciclurile stocate in matricea `history[][]`.
+
+
+
+
+Problema 2
+
+Durata rezolvare: 5-6 ore
+
+Metoda rezolvare:
+Programul citeste operatii si le afiseaza imediat dupa, asteptand caracterul 0 pentru oprirea
+programului. Sirul de caractere pentru fiecare numar este convertit intr-un vector de intregi,
+apoi sunt extrase partea reala si partea imaginara si semnele acestora. In functie de input,
+sunt apelate functiile de adunare si scadere. Ambele functii au cate 4 cazuri luate dupa
+diferitele combinatii de semne (++,--,-+,+-). Dupa calcularea partii reale si imaginare, se
+apeleaza functia `make_out_array()` pentru a concatena semnele si cei 2 vectori.
+
+
+
+
+Problema 3
+
+Durata rezolvare: 30 ore (treizeci)
+
+Metoda rezolvare:
+Programul citeste tipul de codificare si cheia respectiva pana la introducerea cuvantului STOP.
+
+Codificarea A -> Introduce textul in matrice, ordoneaza lexicografic cuvantul cheie si vectorul 
+auxiliar `f[]`. De exemplu, pentru cuvantul cheie `merele`, se intializeaza vectorul `f[]` cu 
+valorile [0,1,2,3,4,5]. Dupa ordonare, cuvantul cheie devine `eeelmr`, iar vectorul `f[]` devine
+[1,3,5,4,0,2]. Pentru codificare, se stocheaza in sirul de caractere `text[]`,
+matrice[linie][f[i]]. De exemplu, daca linie=2,iar i=3, text[ceva] = matrice[2][f[3]], care este
+echivalent cu text[ceva] = matrice[2][4].
+
+
+
+
+
+Problema 4
+
+Durata rezolvare: 2 ore
+
+Metoda rezolvare:
+Cerinta a -> Programul itereaza prin toate masinilie si utilizeaza un vector auxiliar de 4
+elemente petru a numara numarul masinilor pentru fiecare tip de combustibil.
+Cerinta b -> Programul itereaza prin toate masinilie si verifica daca brand-ul masinii
+exista deja in vectorul de structuri. Daca nu exista, il adauga si calculeaza totalul de
+litrii si suma consumata in lei.
+Cerinta c -> Programul itereaza prin toate masinilie si verifica corectitudinea numarului
+de inmatriculare. Se foloseste un sir de caractere auxiliar pentru a stoca cele 3 componente
+ale numarului de inmatriculare. Din lungimea fiecarei componente ne dam seama de corectitudinea
+numarukui de inmatriculare. Daca numarul este incorect, salvam brand-ul si numarul intr-un
+vector de tip struct si le afisam in main.

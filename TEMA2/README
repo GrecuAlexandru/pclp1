@@ -1,0 +1,34 @@
+Problema 1
+
+Timp de lucru: 10 ore
+
+Ideea de rezolvare: Trec prin toate cuvintele si verific daca se potriveste cu unul dintre cuvintele cheie.
+Daca se potriveste cu primul cuvant dintr-o secventa cheie, verific urmatorul cuvant dupa acesta si al doilea
+cuvant din secventa cheie. Daca aceasta se potriveste, salvez pozitia la care incepe si pozitia la care se
+termina secventa (indiferent de spatii). Daca al doilea cuvant nu s-a potrivit cu secventa cheie, se verifica
+in particular. La final, se creeaza o linie plina de spatii si este inlocuita de _ de la pozitia 
+start_end_position[i] pana la start_end_positio[i+1] (i creste cu 2).
+
+
+Problema 2
+
+Timp de lucru: 3 ore
+
+Ideea de rezolvare: La fiecare citire de cuvant, verific daca acesta poate fi autocompletat. Daca cuvantul
+contine steluta, sterg steluta si adaug cuvantul in dictionar daca nu exista deja. Daca exista, incrementez
+prioritatea cuvantului din dictionar cu 1. Daca cuvantul nu contine steluta, iterez prin toate cuvintele din
+dictionar si le compar cu cuvantul introdus. Daca vreun cuvant incepe cu cuvantul introdus, apelez o functie
+ce verifica daca cuvantul din dictionar este cel mai potrivit pentru autocompletare. Aceasta verificare se
+face in functie de prioritate, iar daca prioritatea este egala, se alege cuvantul mai mic lexicografic. Daca
+cuvantul nu se afla in dictionar, se adauga si se seteaza cu prioritatea 1.Se returneaza cel mai bun match si
+se afiseaza.
+
+
+Problema 3
+
+Timp de lucru: 3 ore
+
+Ideea de rezolvare: Descompunem numarul din baza 2 in baza 10 intr un vector de lungime nr_operatii*6+4 si
+salvam primii 4 biti intr-un vector a, urmatorii 2 biti intr-un sir de caractere op, iar inca 4 biti intr-un
+alt vector b. Repetam acest proces pentru cate operatii avem de facut, dar a ia valoarea rezultatului precent.
+In functie de valoarea lui op, efectuam operatia necesara. La final afisam rezultatul transformat in baza 2. 
